@@ -204,7 +204,7 @@ app.post('/api/auth/google', async (req, res) => {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: `${req.headers.origin || 'http://localhost:5000'}/auth/callback`
+        redirectTo: `${req.headers.origin || 'https://productplayground.netlify.app'}/auth/callback`
       }
     });
     
